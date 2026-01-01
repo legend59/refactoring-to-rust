@@ -1,5 +1,5 @@
 [workspace]
-
+resolver = "1"
 members = [
     "paper_search",
     "paper_search_lib",

@@ -5,7 +5,7 @@ use std::os::raw::{c_void, c_int};
 use std::mem;
 use std::ffi::{CStr, c_char, CString};
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub fn memory_search(term: *mut c_char) -> *mut c_char {
       let t = unsafe { CStr::from_ptr(term).to_bytes().to_vec() }; 
       let mut output = t.to_vec();
@@ -16,7 +16,7 @@ pub fn memory_search(term: *mut c_char) -> *mut c_char {
       unsafe { CString::from_vec_unchecked(res)}.into_raw()
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub extern fn allocate(size: usize) -> *mut c_void { 
     let mut buffer = Vec::with_capacity(size);
     let pointer = buffer.as_mut_ptr();
@@ -38,7 +38,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub fn static_search(
     page: isize,
     offset: isize,

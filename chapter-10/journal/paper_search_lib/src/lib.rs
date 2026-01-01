@@ -25,7 +25,12 @@ pub struct Author {
 
 pub async fn search(term: String, page: isize, max_results: isize) -> Result<Feed, reqwest::Error> {
     let http_response = reqwest::get(format!(
-        "http://export.arxiv.org/api/query?search_query=all:{}&start={}&max_results={}",
+        // "http://export.arxiv.org/api/query?search_query=all:{}&start={}&max_results={}",
+        // A node proxy server is required to run this.
+        // Please run it below.
+        // cd ./chapter-10/arxiv-local-proxy
+        // npm start
+        "http://127.0.0.1:3000/api/query?search_query=all:{}&start={}&max_results={}",
         term,
         page * max_results,
         max_results

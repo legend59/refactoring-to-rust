@@ -6,7 +6,7 @@ use std::os::raw::{c_void, c_int};
 use std::mem;
 use std::ffi::{CStr, c_char, CString};
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub fn memory_search(term: *mut c_char) -> *mut c_char {
       let t = unsafe { CStr::from_ptr(term).to_bytes().to_vec() }; 
       let mut output = t.to_vec();
@@ -17,7 +17,7 @@ pub fn memory_search(term: *mut c_char) -> *mut c_char {
       unsafe { CString::from_vec_unchecked(res)}.into_raw() 
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub extern fn allocate(size: usize) -> *mut c_void { 
     let mut buffer = Vec::with_capacity(size);
     let pointer = buffer.as_mut_ptr();
@@ -68,7 +68,12 @@ pub fn search(
 
 pub async fn call_api(term: String) -> Result<SearchResult, reqwest::Error> {
     let http_response = reqwest::get(format!(
-        "http://gutendex.com/books/?search={}",
+        // "http://gutendex.com/books/?search={}",
+        // A node proxy server is required to run this.
+        // Please run it below.
+        // cd ./chapter-10/arxiv-local-proxy
+        // npm start
+        "http://127.0.0.1:3000/books/?search={}",
         term
     ))
     .await?;
