@@ -20,7 +20,8 @@ pub async fn paper_search(val: JsValue) -> JsValue{
 
 #[wasm_bindgen]
 pub fn list_component() -> Result<(), JsValue> {
-    yew::start_app::<List>();
+    //yew::start_app::<List>();
+    yew::Renderer::<List>::new().render();
     Ok(())
 }
 
