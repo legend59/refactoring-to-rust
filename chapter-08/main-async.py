@@ -33,7 +33,7 @@ async def mandelbrot_func(size: int, path: str, range_x0: float, range_y0: float
 
 async def main():
     await asyncio.gather(*[
-        mandelbrot_func(1000, f"purp{i}.png", -5.0, -2.12, -2.5, 1.12)
+        mandelbrot_func(1000, f"{i}.png", -5.0, -2.12, -2.5, 1.12)
         for i in range(0,8)
     ])
 

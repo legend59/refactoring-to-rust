@@ -30,4 +30,4 @@ def mandelbrot(size: int, path: str, range_x0: float, range_y0: float, range_x1:
             image.putpixel((px, py), (i, i, i))
     image.save(path)
 
-mandelbrot(1000, "purp.png", -5.0, -2.12, -2.5, 1.12)
+mandelbrot(1000, "single.png", -5.0, -2.12, -2.5, 1.12)
