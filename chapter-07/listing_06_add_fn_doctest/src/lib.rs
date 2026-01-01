@@ -1,4 +1,4 @@
-/// Add together two i32 numbers and return the result of that addition
+/// 두 개의 i32 숫자를 더하고 더한 결과를 반환합니다.
 /// ```
 /// assert_eq!(chapter_07_listing_06::add(2, 2), 4);
 /// ```

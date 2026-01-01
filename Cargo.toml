@@ -1,6 +1,7 @@
 # Auto generated with `./script/gen-workspace`
 
 [workspace]
+resolver = "2"
 members = [
     "chapter-01/listing_02_rust_csv",
     "chapter-01/listing_04_rust_map",
@@ -102,4 +103,14 @@ members = [
     "chapter-07/listing_10_rust_json_raw_string",
     "chapter-07/listing_11_more_rust_tests",
     "chapter-07/listing_18_add_bug_to_rust",
+
+    "chapter-08",
+
+    "chapter-09/papers",
+
+#   "chapter-10/journal",
+#   "chapter-10/journal/book_search",
+    "chapter-10/journal/journal_cli",
+#   "chapter-10/journal/paper_search",
+#   "chapter-10/journal/paper_search_lib",
 ]

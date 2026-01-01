@@ -10,6 +10,7 @@ with open('Cargo.toml', 'w') as f:
     print("""# Auto generated with `./script/gen-workspace`
 
 [workspace]
+resolver = "2"
 members = [""", file=f)
 
     chapter = 'chapter-01'
@@ -24,8 +25,11 @@ members = [""", file=f)
 
         line_start = '    '
 
-        if dirname.endswith('NO_COMPILE'):
+        if dirname.endswith('NO_COMPILE') or dirname.startswith('chapter-10'):
             line_start = '#   '
+
+        if dirname.endswith('journal_cli'):
+            line_start = '    '
 
         print(f'{line_start}"{dirname}",', file=f)
 
