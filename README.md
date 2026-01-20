@@ -1,10 +1,13 @@
-# '리팩터링 to 러스트' 책의 소스 코드
+# '러스트로 갈아타기' 책의 소스 코드
 
 [책 구매하기(원서)][buy_book]
 
+
+![러스트로 갈아타기](./img/RefactoringToRust_kor_465_547.png)
+
 [책 구매하기(번역서)][buy_book_kor]
 
-이 리파지토리에는 새 책 _'리팩터링 to 러스트'_ 의 모든 소스 코드 목록이 있습니다.
+이 리파지토리에는 새 책 _'러스트로 갈아타기'_ 의 모든 소스 코드 목록이 있습니다.
 소스 코드 목록은 장 번호와 책의 코드 번호 순으로 정리되어 있습니다.
 단일 목록에 표현하기 어려운 큰 예제는 별도의 디렉터리에 있습니다.
 
@@ -20,4 +23,4 @@ https://play.rust-lang.org/ 를 방문하세요.
 디렉터리 이름에 NO_COMPILE이 포함된 코드는 컴파일되지 않고 실패합니다.
 
 [buy_book]: https://www.manning.com/books/refactoring-to-rust?utm_source=mara&utm_medium=affiliate&utm_campaign=book_mara_refactoring_1_6_21&a_aid=mara&a_bid=eedce54d
-[buy_book_kor]: https://www.hanb.co.kr
+[buy_book_kor]: https://www.hanbit.co.kr
