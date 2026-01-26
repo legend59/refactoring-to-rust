@@ -22,5 +22,5 @@ https://play.rust-lang.org/ 를 방문하세요.
 **중요**: 책의 일부 절에서는 러스트를 처음 접하는 개발자가 흔히 저지르는 컴파일 오류를 보여줍니다.
 디렉터리 이름에 NO_COMPILE이 포함된 코드는 컴파일되지 않고 실패합니다.
 
-[buy_book]: https://www.manning.com/books/refactoring-to-rust?utm_source=mara&utm_medium=affiliate&utm_campaign=book_mara_refactoring_1_6_21&a_aid=mara&a_bid=eedce54d
-[buy_book_kor]: https://www.hanbit.co.kr
+[buy_book]: https://www.manning.com/books/refactoring-to-rust
+[buy_book_kor]: https://www.hanbit.co.kr/store/books/look.php?p_code=B2104340259
